@@ -1,7 +1,5 @@
 import random
 import shutil
-
-if __name__ == "__main__":
     #--------------------------
     #  phones = { - tworzenie słownika
       #   "John Doe": "11-22-33",
@@ -39,12 +37,55 @@ if __name__ == "__main__":
     #  set(values) - konwertowanie listy na set
     #  list(values) - konwertowanie seta na listę
 
-    folders = [
-       "folder1", "folder2"
-    ]
-    files = [
-       "text1.txt", "text2.txt"
-    ]
-    for source, target in zip(files, folders):
-        shutil.move(source, target)
+    #  folders = [
+    #     "folder1", "folder2"
+    #  ]
+    #  files = [
+    #     "text1.txt", "text2.txt"
+    #  ]
+    #  for source, target in zip(files, folders):
+    #     shutil.move(source, target)
+if __name__ == "__main__":
+    def factorial (n): # funkcja do liczenia silni
+        if n in [0,1]:
+            return 1
+        p=1
+        for x in range(2, n+1): # tutaj jest pętla
+            p *= x
+        return p
 
+    def my_max(sequence):
+        largest = sequence [0]
+        for element in sequence
+            if element >largest:
+                largest = element
+        return largest
+
+    def max_pos(sequence)
+        largest_pos = 0
+        for i in range(len(sequence)):  #  pętla od 0 do
+            if  sequence[i] >= sequence[largest_pos]:
+                largest_pos = i
+        return largest_pos
+
+    def get_max(sequence)  # to jest sposób na przeglądanie listy i szukanie jednocześnie największej wartości oraz jego numeru indeksu
+        largest_pos = 0
+        for i, element in enumarate(sequence):
+            if  sequence[i] >= sequence[largest_pos]: #  żeby zmienić na taki fajny znaczek to trzeba wejśc w File, Setting, font i zaznaczyć "Enable ligatures"
+                largest_pos = i
+        return largest_pos, sequence[largest_pos]  #  to zwraca dwie rzeczy, zapakowane w krotkę
+
+
+    def get_min_max(sequence)  # funkcja do szukania największego elementu oraz znajdowanie indeksu najmniejszego elementu
+        min_pos = 0
+        largest = sequence[0]
+        for i, element in enumarate(sequence):
+            if element > largest:
+                largest = element
+            if element < sequence[min_pos]:
+                min_pos = i
+
+        return largest_pos, sequence[largest_pos]  # to zwraca dwie rzeczy, zapakowane w krotkę
+
+    result = get_max([1, 3, 6, 7])
+    print(result)
